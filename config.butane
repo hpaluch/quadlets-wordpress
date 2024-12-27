@@ -6,6 +6,37 @@ passwd:
       ssh_authorized_keys:
         - 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKBZD2p///I6TSpWPz5GZd+RFSqC6T5+81cdo5S7LhA4 hpaluch@zotac'
 storage:
+  directories:
+    - path: /home/core/.config
+      user:
+        name: core
+      group:
+        name: core
+    - path: /home/core/.config/containers
+      user:
+        name: core
+      group:
+        name: core
+    - path: /home/core/.config/containers/systemd
+      user:
+        name: core
+      group:
+        name: core
+    - path: /home/core/.config/caddy
+      user:
+        name: core
+      group:
+        name: core
+    - path: /home/core/.config/systemd
+      user:
+        name: core
+      group:
+        name: core
+    - path: /home/core/.config/systemd/user
+      user:
+        name: core
+      group:
+        name: core
   links:
     - path: /home/core/.config/systemd/user/timers.target.wants/podman-auto-update.timer
       target: /usr/lib/systemd/user/podman-auto-update.timer
