@@ -104,6 +104,15 @@ storage:
       group:
         name: core
 
+    - path: /home/core/.config/containers/systemd/mariadb.volume
+      contents:
+        inline: |
+          [Volume]
+      user:
+        name: core
+      group:
+        name: core
+
     - path: /home/core/.config/containers/systemd/wordpress.network
       contents:
         inline: |
